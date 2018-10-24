@@ -25,7 +25,7 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <GridPane prefHeight="349.0" prefWidth="827.0" GridPane.rowIndex="1">
+      <GridPane alignment="BOTTOM_LEFT" prefHeight="349.0" prefWidth="827.0" GridPane.rowIndex="1">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -40,16 +40,20 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <RadioButton fx:id="button1" mnemonicParsing="false" onAction="#questionAnswered" GridPane.rowIndex="1" />
-            <RadioButton fx:id="button2" mnemonicParsing="false" onAction="#questionAnswered" text="RadioButton" GridPane.rowIndex="2" />
-            <RadioButton fx:id="button3" mnemonicParsing="false" onAction="#questionAnswered" text="RadioButton" GridPane.rowIndex="3" />
-            <RadioButton fx:id="button4" mnemonicParsing="false" onAction="#questionAnswered" text="RadioButton" GridPane.rowIndex="4" />
+            <RadioButton fx:id="button1" mnemonicParsing="false" onAction="#answerChoose" text="Pineapple" GridPane.rowIndex="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Choices" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="button2" mnemonicParsing="false" onAction="#answerChoose" text="Volleyball" GridPane.rowIndex="2" />
+            <RadioButton fx:id="button3" mnemonicParsing="false" onAction="#answerChoose" text="Coconut" GridPane.rowIndex="3" />
+            <RadioButton fx:id="button4" mnemonicParsing="false" onAction="#answerChoose" text="Free wifi" GridPane.rowIndex="4" />
             <TextFlow prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <Label fx:id="theQuestion" text="Label" />
+                  <Label fx:id="theQuestion" alignment="TOP_LEFT" text="Question 1: Which of the following items would you most likely bring in a stranded island?" />
                </children></TextFlow>
+            <Label fx:id="Listening" alignment="BOTTOM_LEFT" text="Question 1 of 3 " GridPane.rowIndex="6" />
+            <Button mnemonicParsing="false" onAction="#questionAnswered" text="Submit" GridPane.rowIndex="5" />
          </children>
       </GridPane>
-      <TitledPane animated="false" text="Survey Quiz" />
    </children>
 </GridPane>
